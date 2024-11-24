@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const favoriteSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
@@ -9,4 +9,4 @@ const favoriteSchema = new mongoose.Schema({
   Price: { type: Number, required: true },
 });
 
-module.exports = mongoose.model('Favorite', favoriteSchema);
+export default mongoose.model('Favorite', favoriteSchema);

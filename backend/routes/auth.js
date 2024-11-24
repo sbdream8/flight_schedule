@@ -1,17 +1,13 @@
-const express = require('express');
-const User = require('../models/User');
+import express from 'express';
 const router = express.Router();
 
-router.post('/signup', async (req, res) => {
-  const { name, email, password } = req.body;
-  try {
-    const user = new User({ name, email, password });
-    await user.save();
-    res.status(201).json({ message: 'User created successfully.' });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Failed to create user.' });
-  }
+// Define your authentication routes here
+router.post('/login', (req, res) => {
+  res.send('Login endpoint');
 });
 
-module.exports = router;
+router.post('/signup', (req, res) => {
+  res.send('Signup endpoint');
+});
+
+export default router; // Ensure the router is exported as default
