@@ -1,9 +1,14 @@
 const mongoose = require('mongoose');
-const uri = 'mongodb+srv://sebindream:<Lsbdream58*>@cluster0.oj6ek.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+
+const uri = 'mongodb+srv://sebindream:Lsbdream58%2A@cluster0.mongodb.net/sample_mflix?retryWrites=true&w=majority&directConnection=true';
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('MongoDB connection error:', err));
+  .then(() => console.log('Connected to MongoDB successfully'))
+  .catch(err => {
+    console.error('MongoDB connection error:', err.message);
+    process.exit(1); // Exit on connection failure
+  });
+
 
 // Your existing server setup code
 const express = require('express');
