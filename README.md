@@ -1,5 +1,5 @@
 # flight_schedule
-Project: Flight information inquiry website
+<!-- Project: Flight information inquiry website
 
 Project goal
 -Create a website where you can look up flight information.
