@@ -28,7 +28,15 @@ app.use('/api/user', userRoutes);
 app.use('/api/favorites', favoritesRoutes);
 
 // Start server
-const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// const PORT = process.env.PORT || 5001;
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT}`);
+// });
+const port = 5001; // Change to a port that isn't in use
+
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
+
+
+
