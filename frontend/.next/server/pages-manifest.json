@@ -3,6 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/mypage": "pages/mypage.js",
-  "/favorites": "pages/favorites.js"
+  "/signup": "pages/signup.js",
+  "/favorites": "pages/favorites.js",
+  "/mypage": "pages/mypage.js"
 }
